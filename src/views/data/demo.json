@@ -1,0 +1,25 @@
+// This data gets injected into the example.html view
+// and is accessible using double brackets:
+// e.g. {{ recordTitle }}
+{
+  "cards": [
+    {
+      "name": "Account",
+      "details": "Arabica Acerbic Affogato Aftertaste Aged Americano And Aroma, milk Barista filter cultivar id grounds, brewed blue sugar carajillo latte barista. Spice sweet froth filter Barista est extra Con robust foam, brewed cortado steamed grounds Blue saucer cultivar fair milk java, press barista flavour panna whipped mountain chicory Aroma.",
+      "standardIcon": "account",
+      "iconColor": "standard-account"
+    },
+    {
+      "name": "Opportunity",
+      "details": "Brewed cortado steamed grounds Blue saucer cultivar fair milk java, press barista flavour panna whipped mountain chicory Aroma.",
+      "standardIcon": "opportunity",
+      "iconColor": "standard-opportunity"
+    },
+    {
+      "name": "Task",
+      "details": "Id half wings iced turkish go cortado caffeine grounds mazagran Black, Body strong froth filter et single siphon Beans crema so press, macchiato Aftertaste mocha percolator milk Con Brewed extra Aromatic. Con At Americano Brewed plunger press spice instant, robusta caffeine whipped Arabica filter flavour, french skinny bar id coffee single..",
+      "standardIcon": "task",
+      "iconColor": "standard-task"
+    }
+  ]
+}
