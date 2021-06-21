@@ -1,0 +1,24 @@
+// This data gets injected into the mydemo.html view
+{
+  "cards": 
+  [
+    {
+      "name": "Account",
+      "details": "Arabica Acerbic Affogato Aftertaste Aged Americano And Aroma milk est, eu At aromatic roast instant au percolator. Barista redeye Body espresso shop strong plunger macchiato, white grounds doppio extraction lait whipped and pumpkin.",
+      "standardIcon": "account",
+      "iconColor": "standard-account",
+    },
+    {
+      "name": "Opportunity",
+      "details": "Sugar press seasonal cream skinny latte aftertaste, percolator kopi-luwak to decaffeinated Aftertaste aged carajillo, plunger robust sweet saucer viennese. ",
+      "standardIcon": "opportunity",
+      "iconColor": "standard-opportunity",
+    },
+    {
+      "name": "Task",
+      "details": "In mountain decaffeinated breve Americano go shot Au kopi-luwak, grounds and shop strong crema aftertaste sweet, aromatic cultivar cup mug at aroma caffeine. Aroma trade aromatic et barista fair milk roast, espresso french cappuccino shot.",
+      "standardIcon": "task",
+      "iconColor": "standard-task",
+    },
+  ]
+}

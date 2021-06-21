@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My SLDS Demo</title>
+  <link rel="icon" type="image/png" href="/favicon.png" />
+  <meta name="robots" content="noindex, nofollow" />
+
+  <!-- Prototype styles -->
+  <link rel="stylesheet" href="/styles/index.css" />
+</head>
+<body>
+  <div class="slds-p-around--large slds-container--center slds-container--large landing">
+    <h1 class="slds-text-heading--large">
+      My Fun SLDS playground page
+    </h1>
+    <br>
+    {% for card in cards %}
+    <article class="slds-card">
+        <div class="slds-card__header slds-grid">
+            <header class="slds-media slds-media_center slds-has-flexi-truncate">
+                <div class="slds-media__figure">
+                    <span class="slds-icon_container slds-icon-{{ card.iconColor }}" title="icon-{{ card.iconColor }}">
+                        <svg class="slds-icon slds-icon_small" aria-hidden="true">
+                            <use xlink:href="/assets/icons/standard-sprite/svg/symbols.svg#{{ card.standardIcon }}"></use>
+                        </svg>
+                        <span class="slds-assistive-text">icon-{{ card.iconColor }}</span>
+                    </span>
+                </div>
+                <div class="slds-media__body">
+                    <h2 class="slds-card__header-title">
+                        <a href="#" class="slds-card__header-link slds-truncate" title="{{ card.name }}">
+                            <span>{{ card.name }}</span>
+                        </a>
+                    </h2>
+                </div>
+                <div class="slds-no-flex">
+                    <div class="slds-dropdown-trigger slds-dropdown-trigger_click">
+                        <button class="slds-button slds-button_icon slds-button_icon-x-small slds-button_icon-border-filled" aria-haspopup="true" title="Show More">
+                            <svg class="slds-button__icon" aria-hidden="true">
+                                <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#down"></use>
+                            </svg>
+                            <span class="slds-assistive-text">Show More</span>
+                        </button>
+                        <div class="slds-dropdown slds-dropdown_right">
+                            <ul class="slds-dropdown__list" role="menu" aria-label="Show More">
+                                <li class="slds-dropdown__item" role="presentation">
+                                    <a href="#" role="menuitem" tabindex="0">
+                                        <span class="slds-truncate" title="Menu Item One">Menu Item One</span>
+                                    </a>
+                                </li>
+                                <li class="slds-dropdown__item" role="presentation">
+                                    <a href="#" role="menuitem" tabindex="-1">
+                                        <span class="slds-truncate" title="Menu Item Two">Menu Item Two</span>
+                                    </a>
+                                </li>
+                                <li class="slds-dropdown__item" role="presentation">
+                                    <a href="#" role="menuitem" tabindex="-1">
+                                        <span class="slds-truncate" title="Menu Item Three">Menu Item Three</span>
+                                    </a>
+                                </li>
+                                <li class="slds-has-divider_top-space" role="separator"></li>
+                                <li class="slds-dropdown__item" role="presentation">
+                                    <a href="#" role="menuitem" tabindex="-1">
+                                        <span class="slds-truncate" title="Menu Item Four">Menu Item Four</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </header>
+        </div>
+        <div class="slds-card__body slds-card__body_inner">{{ card.details }}</div>
+        <footer class="slds-card__footer">
+            <a class="slds-card__footer-action" href="#">View All
+                <span class="slds-assistive-text">Accounts</span>
+            </a>
+        </footer>
+    </article>
+    {% endfor %}
+  </div>
+
+  <script src="/scripts/app.js"></script>
+  <script src="/scripts/vendor/svg4everybody.min.js"></script>
+  <script>svg4everybody();</script>
+</body>
+</html>
