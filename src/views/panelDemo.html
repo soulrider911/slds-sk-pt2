@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>SLDS Panel Demo</title>
+        <link rel="icon" type="image/png" href="/favicon.png" />
+        <meta name="robots" content="noindex, nofollow" />
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <!-- Prototype styles -->
+        <link rel="stylesheet" href="/styles/index.css" />
+    </head>
+    <body>
+        <header class="slds-theme_default slds-border_bottom slds-p-around_small slds-grid" style="z-index:1">
+            <button class="slds-button slds-button_icon slds-is-selected slds-button_icon-border-filled slds-button_icon-border slds-m-right_small slds-col slds-size_1-of-16"
+                title="Toggle panel" aria-expanded="true" aria-controls="example-unique-id-11" aria-pressed="true">
+                <svg class="slds-button__icon" aria-hidden="true">
+                    <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#toggle_panel_left"></use>
+                </svg>
+                <span class="slds-assistive-text">Provide description of action</span>
+            </button>
+            <h1 class="slds-text-heading--large slds-col">SLDS Panel Demo</h1>
+        </header>
+        <div class="demo-only-element"
+            style="background-color:#fafaf9;position:relative;height:600px;overflow:hidden;display:flex;flex-direction:row">
+            <div class="slds-panel slds-size_medium slds-panel_docked slds-panel_docked-left slds-panel_drawer slds-is-open"
+                aria-hidden="false" id="example-unique-id-11">
+                <div class="slds-panel__header">
+                    <h2 class="slds-panel__header-title slds-text-heading_small slds-truncate" title="Panel Header">Panel Header
+                    </h2>
+                    <div class="slds-panel__header-actions">
+                        <button class="slds-button slds-button_icon slds-button_icon-small slds-panel__close"
+                            title="Collapse Panel Header">
+                            <svg class="slds-button__icon" aria-hidden="true">
+                                <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#close"></use>
+                            </svg>
+                            <span class="slds-assistive-text">Collapse Panel Header</span>
+                        </button>
+                    </div>
+                </div>
+                <div class="slds-panel__body">A panel body accepts any layout or component</div>
+            </div>
+            <div class="demo-only-content slds-col slds-p-around_medium">This section is demo-only content representing a custom
+                layout in conjunction with the panel. It is not a part of the blueprint.</div>
+        </div>
+
+        <script src="/scripts/app.js"></script>
+        <script src="/scripts/vendor/svg4everybody.min.js"></script>
+        <script>svg4everybody();</script>
+        <script type="text/javascript">
+            $(function(){
+                //Create some variables to store our elements
+                var panelToggle = $("button[title='Toggle panel']");
+                var panel = $(".slds-panel");
+                var panelClose = $(".slds-panel__close");
+
+                //when the close button is clicked close the panel and change the stateful button's state
+                panelClose.on("click" , function(){
+                    panel.addClass("panel-closed");
+                    panelToggle.toggleClass("slds-is-selected");
+                });
+
+                //when the panel toggle stateful button is pressed toggle the panel and change the stateful button's state
+                panelToggle.on("click", function(){
+                  $(this).toggleClass("slds-is-selected");
+                  panel.toggleClass("panel-closed");
+                });
+            })
+        </script>
+    </body>
+</html>

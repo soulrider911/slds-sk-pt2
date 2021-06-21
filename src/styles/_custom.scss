@@ -1,0 +1,6 @@
+.slds-panel{
+    transition: all .25s ease-in-out;
+    &.panel-closed{
+        margin-left:-20rem;
+    }
+}
